@@ -1,3 +1,61 @@
 <div class="container">
     <h2 class="text-center m-3">你想對誰說幹話？</h2>
+    <form action="/" method="POST">
+        <div class="card-group mb-4">
+            <div class="card m-3 border">
+                <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg"
+                    class="card-img-top border-bottom" alt="engineer-img" style="height: 100%;">
+                <div class="card-body">
+                    <h5 class="card-title text-center">工程師</h5>
+                </div>
+                <div class="card-footer">
+                    <div class="form-check d-flex justify-content-center">
+                        <input class="form-check-input position-static" type="radio" name="choice" id="engineer"
+                            value="engineer" aria-label="..." style="height: 15px; width: 15px" {{#is
+                            character 'engineer' }} checked {{/is}}>
+                    </div>
+                </div>
+            </div>
+            <div class="card m-3 border">
+                <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg"
+                    class="card-img-top border-bottom" alt="designer-img" style="height: 100%;">
+                <div class="card-body">
+                    <h5 class="card-title text-center">設計師</h5>
+                </div>
+                <div class="card-footer">
+                    <div class="form-check d-flex justify-content-center">
+                        <input class="form-check-input position-static" type="radio" name="choice" id="designer"
+                            value="designer" aria-label="..." style="height: 15px; width: 15px" {{#is
+                            character 'designer' }} checked {{/is}}>
+                    </div>
+                </div>
+            </div>
+            <div class="card m-3 border">
+                <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg"
+                    class="card-img-top border-bottom" alt="entrepreneur-img" style="height: 100%;">
+                <div class="card-body">
+                    <h5 class="card-title text-center">創業家</h5>
+                </div>
+                <div class="card-footer">
+                    <div class="form-check d-flex justify-content-center">
+                        <input class="form-check-input position-static" type="radio" name="choice" id="entrepreneur"
+                            value="entrepreneur" aria-label="..." style="height: 15px; width: 15px" {{#is
+                            character 'entrepreneur' }} checked {{/is}}>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="form-group row d-flex justify-content-around align-self-center">
+                <button type="submit" class="btn btn-outline-danger col-12 col-md-2 m-1"
+                    style="height: 50px;">產生幹話</button>
+                <div class="card col-12 col-md-8 m-1 d-flex justify-content-center align-self-center"
+                    style="height: 50px; font-size:medium; font-weight:bolder;">
+                    <div class="card-body">
+                        {{#if rubbish}} {{rubbish}} {{/if}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
 </div>
