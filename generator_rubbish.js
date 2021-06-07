@@ -19,7 +19,7 @@ function generateRubbish(character) {
 
 
     function randomSelector(arr) {
-        const item = arr[Math.floor(Math.random() * arr.length)];
+        const item = arr[Math.floor(Math.random() * arr.length)]
         return item
     }
 
